@@ -47,4 +47,4 @@ async def on_message(message):
                     os.remove(p)
 
 def run_bot():
-    client.run("")
+    client.run("token")
