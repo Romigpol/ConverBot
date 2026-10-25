@@ -1,6 +1,6 @@
 import os
 import discord
-from convertidor import find_converter
+from converter import find_converter
 
 intents = discord.Intents.default()
 intents.message_content = True  
