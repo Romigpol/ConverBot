@@ -3,7 +3,7 @@ import flet as ft
 from bot_d import run_bot
 
 def main(page: ft.Page):
-    page.title = "Panel de Control - ConverBot"
+    page.title = "ConverBot"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.padding = 30
@@ -11,7 +11,7 @@ def main(page: ft.Page):
     page.window.height = 400
 
     description_text = (
-        "Sistema automatizado de conversión local de documentación de documentos y archivos  multimedia para tu servidor de discord."
+        "Sistema automatizado de conversión local de documentos y archivos  multimedia para tu servidor de discord."
     )
 
     title = ft.Text("ConverBot", size=22, weight=ft.FontWeight.BOLD)
@@ -33,7 +33,6 @@ def main(page: ft.Page):
             spacing=25,
         )
     )
-
 
 if __name__ == "__main__":
     bot_thread = threading.Thread(target=run_bot, daemon=True)

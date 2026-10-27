@@ -8,15 +8,15 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    print(f"ConverBot listo como {client.user}")
-
+    print(f"Hola soy {client.user}")
+   
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith("!convertir"):
         if not message.attachments:
-            await message.channel.send("Adjunta un archivo y escribe el formato al que lo quieres pasar. Ejemplo: ! convertir pdf")
+            await message.channel.send("Adjunta un archivo y escribe el formato al que lo quieres pasar. Ejemplo: !convertir pdf")
             return
         parts = message.content.split(" ")
         if len(parts) < 2:
@@ -24,7 +24,7 @@ async def on_message(message):
             return
         target_format = parts[1].lower()
         attachment = message.attachments[0]
-        file_ext = attachment.filename.split('.')[-1].lower()
+        file_ext = attachment.filename.split(".")[-1].lower()
         if file_ext == target_format:
             await message.channel.send("El archivo ya está en el formato requerido.")
             return
